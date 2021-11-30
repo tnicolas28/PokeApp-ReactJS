@@ -7,6 +7,6 @@ export default class DateFormatter {
      * Renvoie une date sous format dd/MM/YYYY
      */
     public dateFormat(date : Date = new Date()): string {
-        return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+        return `${new Date(date).getDate()}/${new Date(date).getMonth() + 1}/${new Date(date).getFullYear()}`;
     }
 }
