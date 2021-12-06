@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import PokemonForm from '../components/pokemon-form';
+import Loader from '../components/pokemon-loader';
 import Pokemon from '../models/pokemon';
 import PokemonService from '../services/pokemon-service';
 
@@ -25,7 +26,7 @@ const PokemonEdit: FunctionComponent<RouteComponentProps<Params>> = ({ match }) 
             <PokemonForm pokemon={pokemon} edition={true}></PokemonForm>
         </div>
       ) : (
-        <h4 className="center">Aucun pokémon à afficher !</h4>
+        <h4 className="center"> <Loader /> </h4>
       )}
     </div>
   );
